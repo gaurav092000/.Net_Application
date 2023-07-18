@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h2>@ViewData["Message"]</h2>
+<h2>
+    @ViewData["Currunt Time :"]
+
+</h2>
+
+<ul>
+    @{
+        foreach (string i in (string[])ViewData["FruitArray"])
+        {
+            <h2>@i</h2>
+        }
+    }
+
+</ul>
+
+<ul>
+    @{
+        foreach (string str in (List<string>)ViewData["SportData"])
+        {
+            <h2>@str</h2>
+        }
+    }
+
+</ul>

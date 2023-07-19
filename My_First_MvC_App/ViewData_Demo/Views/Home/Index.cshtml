@@ -15,7 +15,7 @@
     @{
         foreach (string i in (string[])ViewData["FruitArray"])
         {
-            <h2>@i</h2>
+            <li>@i</li>
         }
     }
 
@@ -25,8 +25,20 @@
     @{
         foreach (string str in (List<string>)ViewData["SportData"])
         {
-            <h2>@str</h2>
+            <li>@str</li>
         }
     }
+
+</ul>
+
+<ul>
+    @{
+
+        var emmp = (ViewData_Demo.Models.Employee)ViewData["Employee"];
+    }
+
+    <li>@emmp.Id</li>
+    <li>@emmp.Name</li>
+    <li>@emmp.Designation</li>
 
 </ul>

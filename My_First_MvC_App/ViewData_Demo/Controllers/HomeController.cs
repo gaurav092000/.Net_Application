@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ViewData_Demo.Models;
 
 namespace ViewData_Demo.Controllers
 {
@@ -25,6 +26,13 @@ namespace ViewData_Demo.Controllers
 
             };
 
+
+            Employee emp=new Employee();
+            emp.Id = 1;
+            emp.Name = "Gaurav";
+            emp.Designation = "Manager";
+
+            ViewData["Employee"]= emp;
             return View();
         }
     }
